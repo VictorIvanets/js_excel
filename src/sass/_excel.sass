@@ -1,0 +1,224 @@
+.container
+    margin: 0rem
+.headerbox
+    position: fixed
+    width: 100%
+    z-index: 2
+.excel
+    position: relative
+    height: 100%
+    min-width: 100%
+
+.header
+    // position: absolute
+    // top: 0
+    // left: 0
+    width: 100%
+    min-height: 6rem
+    padding: 1rem
+    display: grid
+    grid-template-columns: repeat(auto-fit,  minmax(30rem, 1fr))
+    grid-template-rows: repeat(auto-fit, 1fr)
+    grid-gap: 1rem 1rem
+    background: $colorDark
+    &__left
+        text-align: left
+        height: 100%
+        display: flex
+        align-items: center
+        &__logo
+            width: 5rem
+            height: 5rem
+            margin-right: 1rem
+            &__img
+                height: 100%
+        &__input
+            padding: 0.5rem
+            height: 4rem
+            width: 60%
+            border: none
+            outline: 0
+            background: $colorDark
+            color: $colorLight
+            font-size: 3rem
+            &:hover
+                background: #00000028
+            &:focus
+                border-bottom: 1px solid black
+    &__right
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        &__btn
+            width: 6rem
+            height: 4rem
+            margin-right: 2rem
+            border-radius: 0.7rem
+            background: #000
+            color: $colorLight
+            text-transform: uppercase
+            cursor: pointer
+            display: inline-block
+            &:hover
+                background: #121b17
+            &:active
+                scale: 95%
+                background: #000
+            &:last-child
+                color: $colorLight
+                &:hover
+                    color: red
+
+                
+                
+                
+
+                
+
+
+
+
+.toolbar
+    width: 100%
+    height: 4rem
+    background: $colorDark
+    border-top: 1px solid #000
+    border-bottom: 1px solid #000
+    display: flex
+    align-items: center
+
+    &__btn
+        text-align: center
+        width: 5rem
+        height: 3rem
+        margin-right: 0.5rem
+        background: $colorDark
+        color: $colorLight
+        text-transform: uppercase
+        border-radius: 0.7rem
+        cursor: pointer
+        display: inline-block
+        transition: All 0.1s
+        &:hover
+            color: $colorMain
+
+        &:active
+            color: $colorDeepLight
+
+
+
+
+.formula
+    width: 100%
+    height: 4rem
+    background: $colorDark
+    border-bottom: 1px solid #000
+    display: flex
+
+    &__inputbox
+        width: 100%
+        height: 3.5rem
+        // background: #000
+        margin: 0.2rem
+        &__input
+            width: 100%
+            height: 100%
+            // background: #000
+            border: none
+            outline: 0
+            padding: 0.5rem
+            color: $colorLight
+            font-size: 2rem
+            &:hover
+                background: #00000028
+
+    &__info
+        width: 6rem
+        height: 3.5rem
+        // background: #000
+        margin: 0.2rem
+        &__h1
+            text-align: center
+            padding: 0.5rem
+            color: $colorDeepLight
+            font-family: 'Times New Roman'
+            font-style: italic
+
+
+.table
+    width: 100%
+    color: $colorMain
+    position: absolute
+    left: 0
+    right: 0
+    top: 15rem
+    overflow-x: auto
+    height: calc( 100vh - 15rem )
+
+    &__row
+        display: flex
+        width: 100%
+        min-height: 2rem
+        height: 3rem
+        background: #00000011
+        &-info
+            background: #052b1e5b
+            display: flex
+            justify-content: center 
+            align-items: center
+            min-height: 2rem
+            height: 3rem
+            min-width: 6rem
+            border: 1px solid black   
+            border-top: none
+            border-left: none
+            font-size: 1.4rem
+        &-data
+            background: #00000011
+            display: flex
+        &__colum
+            background: #052b1e5b
+            width: 12rem
+            min-width: 12rem
+            border: 1px solid black
+            border-top: none
+            border-left: none
+            display: flex
+            justify-content: center 
+            align-items: center
+            font-size: 1.4rem
+
+        &__cell
+            background: #3a3a3a1a
+            width: 12rem
+            border: 1px solid black
+            border-top: none
+            border-left: none
+            display: flex
+            justify-content: left 
+            align-items: center
+            color: $colorMain
+            padding: 0.5rem
+            font-size: 1.4rem
+            white-space: nowrap
+            outline: none
+            &:focus
+                
+                outline: 2px solid #6d0000b4   
+            
+            
+
+                
+
+
+            
+
+.selected
+    background: #052b1e5b
+    color: white
+    border: none
+    outline: 2px solid #06130ead  
+
+        
+
