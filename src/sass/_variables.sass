@@ -1,58 +1,52 @@
-// @font-face 
-//     font-family: "Raleway-ExtraBold"
-//     src: url("./fonts/Raleway-ExtraBold.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
-// @font-face 
-//     font-family: "Raleway-BoldItalic"
-//     src: url("./fonts/Raleway-BoldItalic.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap")
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
+@font-face 
+    font-family: "Montserrat-Thin"
+    src: url("../fonts/Montserrat-Thin.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: "Montserrat-ExtraLight"
+    src: url("../fonts/Montserrat-ExtraLight.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: "Montserrat-Bold"
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: "Montserrat-BoldItalic"
+    src: url("../fonts/Montserrat-BoldItalic.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: "Montserrat-Regular"
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
+@font-face 
+    font-family: "Montserrat-Italic"
+    src: url("../fonts/Montserrat-Italic.ttf") format("truetype")
+    font-weight: normal
+    font-style: normal
 
-// @font-face 
-//     font-family: "Raleway-Medium"
-//     src: url("./fonts/Raleway-Medium.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
 
-// @font-face 
-//     font-family: "Raleway-Light"
-//     src: url("./fonts/Raleway-Light.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
 
-// @font-face 
-//     font-family: "HelveticaNeueCyr-Thin"
-//     src: url("./fonts/HelveticaNeueCyr-Thin.ttf") format("truetype")
-//     font-weight: normal
-//     font-style: normal
-// @font-face 
-//     font-family: "Comfortaa-Light"
-//     src: url("./fonts/Comfortaa-Light.ttf") format("truetype")
-//     font-weight: normal
-//     font-style: normal
+//  .montserrat-<uniquifier> {
+//   font-family: "Montserrat", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>;
+//   font-style: normal; 
 
-// @font-face 
-//     font-family: "Robotolight"
-//     src: url("./fonts/Robotolight.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
-// @font-face 
-//     font-family: "Robotothin"
-//     src: url("./fonts/Robotothin.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
-// @font-face 
-//     font-family: "Robotobold"
-//     src: url("./fonts/Robotobold.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
-// @font-face 
-//     font-family: "Berkshireswash"
-//     src: url("./fonts/Berkshireswash.woff2") format("truetype")
-//     font-weight: normal
-//     font-style: normal
-
+//     .open-sans-<uniquifier> {
+//   font-family: "Open Sans", sans-serif;
+//   font-optical-sizing: auto;
+//   font-weight: <weight>; Use a value from 300 to 800
+//   font-style: normal;
+//   font-variation-settings:
+//     "wdth" 100;
+// }
 
 
     
@@ -64,9 +58,9 @@ $colorDark: rgb(0, 51, 47)
 
 html
     font-size: 62.5%
-    font-family: Arial
-    // background: url(./img/firefon.jpg) center / cover no-repeat
-    background: #181818
+    background: #1f1f1f
+    font-family: "Montserrat-ExtraLight"
+
 *
     margin: 0
     padding: 0
@@ -98,10 +92,12 @@ h3
     color: $colorDark
 .white
     color: rgb(255, 255, 255)
-// .bold
-//     font-family: "Raleway-ExtraBold"
-// .lightFont
-//     font-family: "Robotothin"
+.bold
+    font-family: "Montserrat-Bold"
+.regular
+    font-family: "Montserrat-Regular"
+.italic
+    font-family: "Montserrat-Italic"
 .taright
     text-align: right
 .taleft
