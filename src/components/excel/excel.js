@@ -15,11 +15,11 @@ export class Excel {
             const $el =  $.create('div', Component.className)
             const component = new Component($el)
 
-/////// DEBAG
-if (component.name) {
-    window['c' + component.name] = component
-}
-//////
+// /////// DEBAG
+// if (component.name) {
+//     window['c' + component.name] = component
+// }
+// //////
 
 
             $el.html(component.toHTML())
