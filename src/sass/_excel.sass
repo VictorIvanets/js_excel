@@ -164,25 +164,26 @@
         width: 100%
         min-height: 2rem
         height: 3rem
+        position: relative
+
         &-info
             background: #052b1e5b
             display: flex
             justify-content: center 
             align-items: center
-            min-height: 2rem
-            height: 3rem
             min-width: 6rem
             border: 1px solid black   
             border-top: none
             border-left: none
             font-size: 1.4rem
+            user-select: none
         &-data
             background: #00000011
             display: flex
         &__colum
             background: #052b1e5b
             width: 12rem
-            min-width: 12rem
+            min-width: 3rem
             border: 1px solid black
             border-top: none
             border-left: none
@@ -190,10 +191,13 @@
             justify-content: center 
             align-items: center
             font-size: 1.4rem
+            position: relative
+            user-select: none
 
         &__cell
             background: #3a3a3a1a
             width: 12rem
+            min-width: 3rem
             border: 1px solid black
             border-top: none
             border-left: none
@@ -214,12 +218,48 @@
 
 
             
-
 .selected
     background: #052b1e5b
     color: white
     border: none
     outline: 2px solid #06130ead  
+
+
+.col-resize
+    position: absolute
+    bottom: 0
+    right: 0
+    background: $colorLight
+    opacity: 0
+    zindex: 5
+
+    &:hover 
+        opacity: 1 !important
+
+.row-resize 
+    position: absolute
+    bottom: 0
+    right: 0
+    background: $colorLight
+    opacity: 0
+    &:hover 
+        opacity: 1 !important
+    
+.col-resize 
+    top: 0
+    width: 4px
+    &:hover 
+        cursor: col-resize
+
+.row-resize 
+    left: 0
+    height: 4px
+    &:hover 
+        cursor: row-resize
+    
+  
+
+
 
         
 
