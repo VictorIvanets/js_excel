@@ -1,34 +1,34 @@
-
 const CODES = {
     A: 65,
     Z: 90
 }
 
 
-function toCell(){
+function toCell(_, col){
 return `
-    <div class="table__row__cell" contenteditable=""></div>
+    <div class="table__row__cell" contenteditable="" data-col="${col}"></div>
 
 `
 }
 
-function toColumn(col){
-    return `<div class="table__row__colum">${col}</div>`
+function toColumn(col, index){
+    return `<div class="table__row__colum" data-type="resizeble" data-col="${index}">${col}
+    <div class="col-resize" data-resize="col"></div> 
+    </div>`
 }
-
-
-
 
 
 
 function createRow(content, index){
-return `<div class="table__row">
-            <div class="table__row-info">${(index === null ? '' : index)}</div>
+const resize = index ? '<div class="row-resize" data-resize="row"></div>' : ''
+return `<div class="table__row" data-type="resizeble">
+            <div class="table__row-info">
+            ${(index === null ? '' : index)}
+            ${resize}
+            </div>
             <div class="table__row-data">${content}</div>
         </div>`
 }
-
-
 
 
 function toChar(_, index){
@@ -37,11 +37,6 @@ function toChar(_, index){
 
 
 export function createTable(rowsCount = 25) {
-
-
-
-
-
 
     const colsCount = CODES.Z - CODES.A + 1
     const rows = []
@@ -60,12 +55,6 @@ export function createTable(rowsCount = 25) {
         .join('')
     rows.push(createRow(cells, i+1))
     }
-
-
-
-
-
-
 
     return rows.join('')
 }
