@@ -17,6 +17,19 @@ html(html){
     return this.$el.outerHTML.trim()
 }
 
+text(text){
+    if(typeof text === 'string'){
+        this.$el.textContent = text
+        return this
+    }
+    if (this.$el.tagName.toLowerCase() === 'input'){
+        return this.$el.value.trim()
+    }
+    return this.$el.textContent.trim()
+    
+}
+
+
 clear(){
     this.html('')
     return this
@@ -57,6 +70,9 @@ on (eventType, callBack) {
 findAll(selector){
     return this.$el.querySelectorAll(selector)
 }
+find(selector){
+    return  $(this.$el.querySelector(selector))
+}
 
 css(styles = {}){
     Object.keys(styles).forEach(key=>{
@@ -64,9 +80,36 @@ css(styles = {}){
     })
 }
 
+addClass(classN){
+this.$el.classList.add(classN)
+}
 
+removeClass(classN){
+    this.$el.classList.remove(classN)
+}
+
+id(parse){
+    if(parse) {
+        const parsed = this.id().split(':')
+        return {
+            row: +parsed[0],
+            col: +parsed[1]
+        }
+    }
+    return this.data.id
+}
+
+focus(){
+    this.$el.focus()
+    return this
+}
 
 }
+
+
+
+
+
 
 export function $ (selector) {
     return new Dom(selector)
