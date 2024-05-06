@@ -22,9 +22,6 @@ export class Excel {
             return component
         });
 
-
-
-
         return $root
 
     }

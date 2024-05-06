@@ -81,11 +81,13 @@ css(styles = {}){
 }
 
 addClass(classN){
-this.$el.classList.add(classN)
+    this.$el.classList.add(classN)
+    return this
 }
 
 removeClass(classN){
     this.$el.classList.remove(classN)
+    return this
 }
 
 id(parse){
