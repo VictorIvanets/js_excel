@@ -105,7 +105,9 @@
 
         &:active
             color: $colorDeepLight
-
+.active
+    color: $colorMain
+    background: #00000042
 
 
 
@@ -151,13 +153,22 @@
 
 .table
     width: 100%
-    color: $colorMain
+    color: $colorMain !important
     position: absolute
     left: 0
     right: 0
     top: 15rem
     overflow-x: auto
     height: calc( 100vh - 15rem )
+    // // font-family: "Montserrat"
+    // font-weight: bold
+    // font-style: italic
+
+
+
+
+
+
 
     &__row
         display: flex
@@ -201,9 +212,9 @@
             border: 1px solid black
             border-top: none
             border-left: none
-            display: flex
-            justify-content: left 
-            align-items: flex-start
+            // display: flex
+            // justify-content: left 
+            // align-items: flex-start
             color: $colorMain
             padding: 0.5rem
             font-size: 1.4rem

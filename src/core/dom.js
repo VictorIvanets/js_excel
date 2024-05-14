@@ -18,7 +18,7 @@ html(html){
 }
 
 text(text){
-    if(typeof text === 'string'){
+    if(typeof text !== 'undefined'){
         this.$el.textContent = text
         return this
     }
@@ -80,6 +80,13 @@ css(styles = {}){
     })
 }
 
+getStyles(styles=[]){
+    return styles.reduce((res, s)=>{
+        res[s] = this.$el.style[s]
+        return res
+    },{})
+}
+
 addClass(classN){
     this.$el.classList.add(classN)
     return this
@@ -104,6 +111,16 @@ id(parse){
 focus(){
     this.$el.focus()
     return this
+}
+
+attr(name, value){
+    if (value) {
+        this.$el.setAttribute(name, value)
+        return this
+    }
+    return this.$el.setAttribute(name)
+
+
 }
 
 }
