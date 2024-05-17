@@ -1,19 +1,14 @@
-// import { defaultStyles } from "../../constants"
 import { defaultStyles } from "../../constants"
 import {toInlineStyles} from "../../core/utils"
 import {parse} from "../../core/parse"
-
 
 const CODES = {
     A: 65,
     Z: 90
 }
 
-
 const DEFAULT_WIDTH = 120
 const DEFAULT_HEIGHT = 30
-
-
 
 function getWidth(state, index){ 
         return (state[index] || DEFAULT_WIDTH) + 'px'
@@ -23,7 +18,6 @@ function getWidth(state, index){
 function getHeigth(state, index){ 
         return (state[index] || DEFAULT_HEIGHT) + 'px'
 }
-
 
 function toCell(state, row){
 return function(_, col){
@@ -46,8 +40,6 @@ return function(_, col){
         > ${parse(data) || ''}</div>`
     }}
 
-
-
 function toColumn({col, index, width}){
     return `<div 
     class="table__row__colum" 
@@ -58,8 +50,6 @@ function toColumn({col, index, width}){
     <div class="col-resize" data-resize="col"></div> 
     </div>`
 }
-
-
 
 function createRow(content, index, state){
 const resize = index ? '<div class="row-resize" data-resize="row"></div>' : ''
@@ -82,8 +72,6 @@ return `<div
 function toChar(_, index){
     return String.fromCharCode(CODES.A + index)
 }
-
-
 
 function withWidthFrom(state){
     return function(col, index) {

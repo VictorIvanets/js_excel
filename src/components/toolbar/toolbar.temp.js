@@ -1,10 +1,8 @@
-
 function toButton(button) {
     const meta = `
     data-type="button"
     data-value='${JSON.stringify(button.value)}'
     `
-
 
     return `
     <button 
@@ -13,7 +11,6 @@ function toButton(button) {
     <i ${meta} class="material-icons">${button.icon}</i>
     </button>`
 }
-
 
 export function createToolbar(state){
     const buttons = [
@@ -51,26 +48,3 @@ export function createToolbar(state){
 
     return buttons.map(btn => toButton(btn)).join('')
 }
-
-
-
-// ` 
-//     <button class="toolbar__btn">
-//         <i class="material-icons">format_align_left</i>
-//     </button>
-//     <button class="toolbar__btn">
-//         <i class="material-icons">format_align_center</i>
-//     </button>
-//     <button class="toolbar__btn">
-//         <i class="material-icons">format_align_rightt</i>
-//     </button>
-//     <button class="toolbar__btn">
-//         <i class="material-icons">format_bold</i>
-//     </button>
-//     <button class="toolbar__btn">
-//         <i class="material-icons">format_italic</i>
-//     </button>
-//     <button class="toolbar__btn">
-//         <i class="material-icons">format_underlined</i>
-//     </button>
-//     `

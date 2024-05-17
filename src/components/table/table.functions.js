@@ -1,4 +1,3 @@
-
 export function shouldResize(event) {
     return event.target.dataset.resize
 }
@@ -20,7 +19,6 @@ export function matrix($target, $current) {
 
     const target = $target.id(true);
     const current = $current.id(true);
-
     const cols = renge(current.col, target.col)
     const row = renge(current.row, target.row)
 

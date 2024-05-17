@@ -15,7 +15,6 @@ export class Formula extends ExcelComponent {
 
 
     toHTML(){
-    
         return `
         <div class="formula__info"><h2 class="formula__info__h1">fx</h2></div>
         <div class="formula__inputbox"><div id="formula" class="formula__inputbox__input" contenteditable="" spellcheck="false"></div></div>
@@ -24,9 +23,7 @@ export class Formula extends ExcelComponent {
 
     init(){
         super.init()
-
         this.$formula = this.$root.find('#formula')
-
         this.$on('table:select', $cell=>{
             this.$formula.text($cell.data.value)
         })
@@ -43,7 +40,6 @@ export class Formula extends ExcelComponent {
 
     onKeydown(event) {
         const keys = ['Enter', 'Tab']
-
        if (keys.includes(event.key)){
         event.preventDefault()
         this.$emit('formula:done')

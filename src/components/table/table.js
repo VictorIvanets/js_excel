@@ -7,10 +7,6 @@ import {matrix, isCell, shouldResize, nextSelector} from "./table.functions"
 import * as actions from '../../redux/actions'
 import {defaultStyles} from '../../constants'
 import {parse} from "../../core/parse"
-// import { ids } from "webpack";
-
-
-
 
 
 export class Table extends ExcelComponent {
@@ -28,7 +24,6 @@ export class Table extends ExcelComponent {
         this.selection = new TableSelection()
     }
 
-
     init(){
         super.init()
 
@@ -38,7 +33,6 @@ export class Table extends ExcelComponent {
             this.selection.current
                 .attr('data-value', value)
                 .text(parse(value))
-            // this.selection.current.text(value)
             this.updateTextStore(value)
         })
         this.$on("formula:done", () => {
@@ -53,9 +47,6 @@ export class Table extends ExcelComponent {
                 ids: this.selection.selectedIds
             }))
         })
-        // this.$subscribe(state=>{
-        //     console.log("TableState", state);
-        // })
     }
 
     selectCell($cell){
@@ -65,7 +56,6 @@ export class Table extends ExcelComponent {
         this.$dispatch(actions.changeStyles(style))
     }
 
-    
     toHTML(){
         return createTable(20, this.store.getState())}
     
@@ -107,12 +97,7 @@ export class Table extends ExcelComponent {
             const id = this.selection.current.id(true)
             const $next = this.$root.find(nextSelector(key, id))
             this.selectCell($next)
-        }
-        if (event.key === 'Delete'){
-            event.target.textContent = ''
-        }
-        ////  del in state???
-        
+        }   
     }
 
     updateTextStore(value){
@@ -126,7 +111,6 @@ export class Table extends ExcelComponent {
         this.updateTextStore($(event.target).text()) 
     }
 
-    
 }
 
 
