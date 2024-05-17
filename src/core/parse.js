@@ -5,10 +5,6 @@ export function parse(value = '') {
         } catch(e){
             return value
         }
-
-        
     }
-    
-    
     return value
 }

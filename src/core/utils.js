@@ -4,7 +4,6 @@ export function capitalize (string) {
     } else {
         return string.charAt(0).toLocaleUpperCase() + string.slice(1)
     }
-
 }
 
 export function storage(key, data){
@@ -40,4 +39,8 @@ export function debounce(fn, wait){
         clearTimeout(timeout)
         timeout = setTimeout(later, wait)
     }
+}
+
+export function clone(obj) {
+    return JSON.parse(JSON.stringify(obj))
 }
